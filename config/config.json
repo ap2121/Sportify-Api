@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "Sportify-API",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "Sportify-API",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "Sportify-API",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
