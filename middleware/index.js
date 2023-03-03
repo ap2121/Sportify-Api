@@ -1,5 +1,5 @@
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 require('dotenv').config()
 
 const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS)
@@ -16,7 +16,7 @@ const comparePassword = async (storedPassword, password) => {
 }
 
 const createToken = (payload) => {
-    let token = jwt.verify(token, APP_SECRET)
+    let token = jwt.sign(payload, APP_SECRET)
     return token
 }
 
@@ -45,7 +45,7 @@ const stripToken = (req, res, next) => {
     res.status(401).send({status: 'Error', msg: 'Unauthorized'})
     } catch(error) {
         console.log(error)
-        res.status(401).semd({status: 'Errorr', msg: 'Strip Token Error'})
+        res.status(401).send({status: 'Errorr', msg: 'Strip Token Error'})
     }
 }
 
