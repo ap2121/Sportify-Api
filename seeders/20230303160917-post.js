@@ -17,8 +17,8 @@ module.exports = {
     [
       {
         content: "this is cool",
-        userId: 3,
-        sportId: 3,
+        userId: 1,
+        sportId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }
