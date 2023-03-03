@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       userId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'users',
@@ -21,7 +21,7 @@ module.exports = {
         }
       },
       sportId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'sports',
