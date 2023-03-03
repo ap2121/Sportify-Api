@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Post.belongsTo(models.User, { foreignKey: 'userId' })
-      Post.belongsTo(models.Sport, { foreignKey: 'sportId' })
+      Post.belongsTo(models.User, { foreignKey: 'userId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
+      Post.belongsTo(models.Sport, { foreignKey: 'sportId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
 
     }
   }
