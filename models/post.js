@@ -12,13 +12,31 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Post.belongsTo(models.User, { foreignKey: 'userId' })
+      Post.belongsTo(models.Sport, { foreignKey: 'sportId' })
+
     }
   }
   Post.init({
     content: DataTypes.STRING,
-    userId: DataTypes.INTEGER,
-    sportId: DataTypes.INTEGER
-  }, {
+    userId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
+
+    sportId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'sports',
+        key: 'id'
+      }
+    },
+  }, 
+  {
     sequelize,
     modelName: 'Post',
     tableName: 'posts'
