@@ -17,8 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Post.init({
-    content: DataTypes.STRING,
-    
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     userId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
