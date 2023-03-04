@@ -30,7 +30,26 @@ const createPost = async (req, res) => {
 }
 
 const deletePost = async (req, res) => {
-    
+    try {
+        const postId = parseInt(req.params.post_id)
+        await Post.destroy({where: {id: postId}})
+        res.send({msg: `deleted twert with an id of ${postId}` })
+    } catch (error) {
+        throw error
+    }
+}
+
+const updatePost = async (req, res) => {
+    try {
+        let postId = parseInt(req.params.post_id)
+        let updatedPost = await Post.update(req.body, {
+          where: {id: postId},
+          returning: true
+        })
+        res.send(updatedPost)
+      } catch (error) {
+        throw error
+      }
 }
 
 
@@ -38,5 +57,7 @@ const deletePost = async (req, res) => {
 
 module.exports = {
     getPostsBySport,
-    createPost
+    createPost,
+    deletePost,
+    updatePost
 }
