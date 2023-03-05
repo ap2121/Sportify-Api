@@ -56,6 +56,7 @@ const updatePost = async (req, res) => {
 
 
 module.exports = {
+
     getPostsBySport,
     createPost,
     deletePost,
