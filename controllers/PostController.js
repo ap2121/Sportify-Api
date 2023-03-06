@@ -12,6 +12,18 @@ const getPostsBySport = async (req, res) => {
         throw error
     }
 }
+const getPostById = async (req, res) => {
+    try {
+        let id = parseInt(req.params.post_id)
+        const post = await Post.findByPk(id, {
+            include: [{ model: User }, { model: Sport }]
+        })
+        res.send(post)
+
+    } catch(error) {
+        throw error
+    }
+}
 
 const createPost = async (req, res) => {
     try {
@@ -59,6 +71,7 @@ module.exports = {
     getPostsBySport,
     createPost,
     deletePost,
-    updatePost
+    updatePost,
+    getPostById
 }
 
