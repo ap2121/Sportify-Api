@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       User.hasMany(models.Post, { foreignKey: 'userId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
+      User.hasMany(models.Sport, {foreignKey:'sportId', onDelete: 'CASCADE', onUpdate: 'CASCADE'})
     }
   }
   User.init({
@@ -27,7 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-     },
+     }
+     
   }, {
     sequelize,
     modelName: 'User',

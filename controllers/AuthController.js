@@ -1,5 +1,6 @@
 const { User } = require('../models')
 const middleware = require('../middleware')
+
 const Login = async (req, res) => {
     try {
         const user = await User.findOne({
@@ -32,7 +33,6 @@ const Register = async (req, res) => {
         const {email, username} = req.body
         let notHashedPass = req.body.password
         let password = await middleware.hashPassword(notHashedPass)
-        
         const user = await User.create({email, password, username})
         res.send(user)
     } catch (error) {
