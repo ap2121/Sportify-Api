@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Sport.hasMany(models.Post, { foreignKey: 'sportId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
+      Sport.belongsToMany(models.User, { through: models.SportUser, foreignKey: 'sportId', as: 'user_list', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
       
     }
   }
@@ -19,8 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     leagueName: DataTypes.STRING,
     description: DataTypes.STRING,
     image: DataTypes.STRING,
-   
-    
   }, {
     sequelize,
     modelName: 'Sport',
