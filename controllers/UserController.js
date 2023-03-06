@@ -30,7 +30,8 @@ const getSportsByUser = async (req, res) => {
         const user = await User.findByPk(userId, {
             include: [{
                 model: Sport,
-                through: {}
+                as: 'sport_list',
+                through: {attributes: []}
             }]
         })
         res.send(user)
