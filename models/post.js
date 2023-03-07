@@ -29,7 +29,6 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-
     sportId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
@@ -38,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
+    image: DataTypes.STRING
   }, 
   {
     sequelize,
