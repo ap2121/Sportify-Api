@@ -11,3 +11,4 @@ controller.deletePost)
 Router.put('/edit-post/:post_id', 
 controller.updatePost)
 module.exports = Router
+
