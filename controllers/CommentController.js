@@ -22,7 +22,7 @@ const createComment = async (req, res) => {
             postId,
             ...req.body
         }
-        let comment = await Comment.create(postBody)
+        let comment = await Comment.create(commentBody)
         res.send(comment)
     } catch (error) {
         throw error
