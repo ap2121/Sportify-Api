@@ -25,6 +25,19 @@ const getPostById = async (req, res) => {
     }
 }
 
+const getPostsByUser = async (req, res) => {
+    try {
+        const { user_id } = req.params
+        const posts = await Post.findAll({
+            where: { userId: user_id },
+            include: [{ model: User }, { model: Sport }]
+        })
+        res.send(posts)
+    } catch (error) {
+        throw error
+    }
+}
+
 const createPost = async (req, res) => {
     try {
         const userId = req.params.user_id
@@ -72,6 +85,7 @@ module.exports = {
     createPost,
     deletePost,
     updatePost,
-    getPostById
+    getPostById,
+    getPostsByUser
 }
 
