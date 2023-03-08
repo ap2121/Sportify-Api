@@ -1,14 +1,14 @@
 const { Post, User, Sport, SportUser, sequelize } = require('../models')
 
-// const findUserById = async (req, res) => {
-//     try {
-//         let userId = req.params.user_id
-//         const user = await User.findByPk(userId)
-//         res.send(user)
-//     } catch (error) {
-//         throw error
-//     }
-// }
+const findUserById = async (req, res) => {
+    try {
+        let userId = req.params.user_id
+        const user = await User.findByPk(userId)
+        res.send(user)
+    } catch (error) {
+        throw error
+    }
+}
 
 const getAllUsers = async (req, res) => {
     try {
@@ -72,5 +72,6 @@ module.exports = {
     getAllUsers,
     deleteUser,
     getSportsByUser,
-    addSportToUser
+    addSportToUser,
+    findUserById
 }
