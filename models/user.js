@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       User.hasMany(models.Post, { foreignKey: 'userId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
       User.belongsToMany(models.Sport, {through: models.SportUser, as: 'sport_list', foreignKey: 'userId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
+      User.hasMany(models.Comment, { foreignKey: 'userId', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
     }
   }
   User.init({
