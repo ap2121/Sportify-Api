@@ -3,7 +3,9 @@ const { Post, User, Sport, SportUser, sequelize } = require('../models')
 const findUserById = async (req, res) => {
     try {
         let userId = req.params.user_id
-        const user = await User.findByPk(userId)
+        const user = await User.findByPk(userId, {
+            include: {model: Post}
+        })
         res.send(user)
     } catch (error) {
         throw error
