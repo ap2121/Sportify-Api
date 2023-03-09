@@ -17,7 +17,7 @@ module.exports = {
     [
       {
         leagueName: 'NBA',
-        description: "The National Basketball Association is a professional basketball league in Northern America composed of 30 teams. It is one of the major professional sports leagues in the United States and Canada and is considered the premier men's professional basketball league in the world.",
+        description: "The NBA is a top professional basketball league with 30 teams in Northern America. As one of the major pro sports leagues in the US and Canada, it's widely considered the premier men's pro basketball league globally.",
         image: 'https://vbsports.es/wp-content/uploads/2018/08/nba-banner.jpg',
       },
       {
@@ -27,27 +27,27 @@ module.exports = {
       },
       {
         leagueName: 'NHL',
-        description: "The National Hockey League is a professional ice hockey league in North America comprising 32 teams—25 in the United States and 7 in Canada. It is considered to be the top ranked professional ice hockey league in the world, and is one of the four major professional sports leagues in the United States and Canada.",
+        description: "The NHL, a pro ice hockey league in North America, has 32 teams with 25 in the US and 7 in Canada. It's a top-ranked global league and one of the four major pro sports leagues in the US and Canada.",
         image: 'https://images.squarespace-cdn.com/content/v1/59619e059de4bb7b8d0c4f02/1547248047581-6I98F85P8O3RRR0O0CJP/NHL-Banner.png?format=2500w',
       },
       {
         leagueName: 'MLB',
-        description: "Major League Baseball is a professional baseball organization and the oldest major professional sports league in the world. MLB is composed of 30 total teams, divided equally between the National League and the American League, with 29 in the United States and 1 in Canada",
+        description: "Major League Baseball is a pro baseball organization and the world's oldest pro sports league, with 30 teams split evenly between the National and American Leagues, and 29 located in the US and 1 in Canada.",
         image: 'https://www.sgclark.com/blog/wp-content/uploads/2022/05/mlb_mlb_logo.png',
       },
       {
         leagueName: 'MLS',
-        description: "Major League Soccer is a men's professional soccer league sanctioned by the United States Soccer Federation, which represents the sport's highest level in the United States. The league comprises 29 teams—26 in the U.S. and 3 in Canada—since the 2023 season. The league is headquartered in Midtown Manhattan.",
+        description: "MLS is a top-level men's pro soccer league sanctioned by the US Soccer Federation, comprising 29 teams (26 in US, 3 in Canada) since 2023 season. HQ in Midtown Manhattan.",
         image: 'https://images.mlssoccer.com/image/private/t_editorial_landscape_8_desktop_mobile/mls-mia-prd/cslhobzgkmpvuwue9wgx.png',
       },
       {
         leagueName: 'Premier League',
-        description: "The Premier League is the highest level of the men's English football league system. Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League. Seasons typically run from August to May with each team playing 38 matches.",
+        description: "The Premier League, the top tier of the English football league system for men, consists of 20 clubs and follows a promotion and relegation system with the English Football League. Each season, from August to May, every team plays 38 matches.",
         image: 'https://blog.frapapa.com/wp-content/uploads/2022/12/Worst-Premier-League-Player-Ever.jpg',
       },
       {
         leagueName: 'Champions League',
-        description: "The UEFA Champions League is an annual club football competition organized by the Union of European Football Associations and contested by top-division European clubs, deciding the competition winners through a round robin group stage to qualify for a double-legged knockout format, and a single leg final.",
+        description: "UEFA Champions League is an annual football contest among top European clubs. Teams play in a group stage and progress to double-legged knockout matches, culminating in a single-leg final to determine the winner. Organized by UEFA.",
         image: 'https://t2.tudocdn.net/620371?w=1920&h=1440',
       },
       {
@@ -57,7 +57,7 @@ module.exports = {
       },
       {
         leagueName: 'LaLiga',
-        description: "The Campeonato Nacional de Liga de Primera División, commonly known simply as Primera División in Spain, and as La Liga in English-speaking countries and officially as LaLiga Santander for sponsorship reasons, stylized as LaLiga, is the men's top professional football division of the Spanish football league system.",
+        description: "LaLiga, Spain's top men's pro football division, is known as Primera División locally and as La Liga globally. It's sponsored by Santander and comprises the country's best teams.",
         image: 'https://iscreativestudio.com/wp-content/uploads/2016/08/logotipos5.jpg',
       },
       {
@@ -72,7 +72,7 @@ module.exports = {
       },
       {
         leagueName: 'UFC',
-        description: "The Ultimate Fighting Championship is an American mixed martial arts promotion company based in Las Vegas, Nevada. It is owned and operated by Zuffa, a wholly owned subsidiary of Endeavor Group Holdings. It is the largest MMA promotion company in the world as of 2011.",
+        description: "Based in Las Vegas, UFC is the world's largest MMA promotion company as of 2011. Owned by Zuffa, a subsidiary of Endeavor Group Holdings, it's an American mixed martial arts organization that operates worldwide.",
         image: 'https://www.wkbn.com/wp-content/uploads/sites/48/2020/07/UFC-logo.jpg?w=1280',
       },
     ]
