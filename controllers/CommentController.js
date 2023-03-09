@@ -13,15 +13,6 @@ const getCommentsByPost = async (req, res) => {
     }
 }
 
-const getAllComments = async (req, res) => {
-    try {
-        const comments = await Comment.findAll({})
-        res.send(comments)
-    } catch(error) {
-        throw error
-    }
-}
-
 const createComment = async (req, res) => {
     try {
         const userId = req.params.user_id
@@ -52,5 +43,4 @@ module.exports = {
     getCommentsByPost,
     createComment,
     deleteComment,
-    getAllComments
 }
