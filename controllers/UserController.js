@@ -4,7 +4,7 @@ const findUserById = async (req, res) => {
     try {
         let userId = req.params.user_id
         const user = await User.findByPk(userId, {
-            include: [{model: Post}]
+            include: [{ model: Post }]
         })
         res.send(user)
     } catch (error) {
@@ -19,7 +19,6 @@ const getAllUsers = async (req, res) => {
     } catch (error) {
         throw error
     }
-
 }
 
 const deleteUser = async (req, res) => {
@@ -29,7 +28,6 @@ const deleteUser = async (req, res) => {
             where: { id: id }
         })
         res.send(`User with id ${id} deleted`)
-
     } catch (error) {
         throw error
     }
@@ -43,7 +41,7 @@ const getSportsByUser = async (req, res) => {
             include: [{
                 model: Sport,
                 as: 'sport_list',
-                through: {attributes: []}
+                through: { attributes: [] }
             }]
         })
         res.send(user)
@@ -67,8 +65,6 @@ const addSportToUser = async (req, res) => {
     }
 
 }
-
-
 
 module.exports = {
     getAllUsers,

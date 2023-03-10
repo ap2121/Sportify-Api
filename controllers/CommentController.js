@@ -17,7 +17,7 @@ const getAllComments = async (req, res) => {
     try {
         const comments = await Comment.findAll({})
         res.send(comments)
-    } catch(error) {
+    } catch (error) {
         throw error
     }
 }
@@ -41,8 +41,8 @@ const createComment = async (req, res) => {
 const deleteComment = async (req, res) => {
     try {
         const id = parseInt(req.params.comment_id)
-        await Comment.destroy({where: {id: id}})
-        res.send({msg: `deleted with an id of ${id}` })
+        await Comment.destroy({ where: { id: id } })
+        res.send({ msg: `deleted with an id of ${id}` })
     } catch (error) {
         throw error
     }
