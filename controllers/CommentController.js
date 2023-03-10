@@ -17,7 +17,7 @@ const getAllComments = async (req, res) => {
     try {
         const comments = await Comment.findAll({})
         res.send(comments)
-    } catch (error) {
+    } catch(error) {
         throw error
     }
 }
@@ -52,5 +52,5 @@ module.exports = {
     getCommentsByPost,
     createComment,
     deleteComment,
-    getAllComments
+    getAllComments,
 }
